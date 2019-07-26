@@ -17,11 +17,14 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+
+    QString configPath = getConfigLocation();
+    QSettings settings(configPath, QSettings::IniFormat);
     
     return a.exec();
 }
 
-QString getConfigLocation() //Get location of config and parse it >> TODO: Seperate into class that deals with and parses config
+QString getConfigLocation() //Get location of config and parse it
 {
     QString configLocation = QStandardPaths::locate(QStandardPaths::ConfigLocation, CONFIG_FULLPATH, QStandardPaths::LocateFile);
     if (configLocation != "")

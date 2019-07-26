@@ -25,12 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        asset.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        portfolio.cpp
 
 HEADERS += \
+        asset.h \
         filedefs.h \
-        mainwindow.h
+        mainwindow.h \
+        portfolio.h
 
 FORMS += \
         mainwindow.ui

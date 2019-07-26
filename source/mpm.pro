@@ -29,6 +29,7 @@ SOURCES += \
         mainwindow.cpp
 
 HEADERS += \
+        filedefs.h \
         mainwindow.h
 
 FORMS += \

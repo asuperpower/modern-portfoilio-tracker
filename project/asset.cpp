@@ -15,3 +15,13 @@ Asset::Asset(type assetType, QString name, double allocation)
 }
 
 //AssetPrivate::AssetPrivate(type assetType, QString name, double allocation) :
+
+QJsonDocument Asset::toJson()
+{
+    Q_D(Asset);
+    QJsonObject assetJson;
+
+    assetJson[ASSET_TYPE] = d->assetType;
+    assetJson[ASSET_NAME] = d->name;
+    assetJson[ASSET_ALLOCATION] = d->allocation;
+}

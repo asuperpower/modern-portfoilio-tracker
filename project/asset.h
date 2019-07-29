@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QJsonDocument>
+#include <QJsonObject>
 
 //For json array
 #define ASSET_TYPE          "type"

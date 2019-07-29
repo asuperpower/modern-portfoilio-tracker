@@ -17,7 +17,7 @@ public:
 
     bool isValid();
 
-    void addAsset(asset *newAsset);
+    void addAsset(Asset &newAsset);
 
 
 protected:
@@ -28,9 +28,7 @@ signals:
 public slots:
 
 private:
-    //linked list of items
-    //type {stock, bond, etc.} -- this should also be a class probably
-    //weight {percentage}
+    //asset class
 };
 
 #endif // PORTFOLIO_H

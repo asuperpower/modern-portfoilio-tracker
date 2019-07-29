@@ -2,24 +2,31 @@
 #define ASSET_H
 
 #include <QObject>
+#include <QJsonDocument>
 
-class asset : public QObject
+//For json array
+#define ASSET_TYPE          "type"
+#define ASSET_NAME          "name"
+#define ASSET_ALLOCATION    "allocation"
+
+enum type{cash, stocks, bonds};
+
+class AssetPrivate;//PIMPL
+
+class Asset : public QObject
 {
     Q_OBJECT
 public:
-    enum type{cash, stocks, bonds};
-
-    asset();
-    explicit asset(QObject *parent = nullptr);
-    asset(type assetType, QString name, double allocation);
+    //asset();
+    explicit Asset(QObject *parent = nullptr);
+    Asset(type assetType, QString name, double allocation);
+    QJsonDocument toJson();
 signals:
 
 public slots:
 
 private:
-    type assetType;
-    QString name;
-    double allocation;//percentage
+    Q_DECLARE_PRIVATE(Asset)
 };
 
 #endif // ASSET_H

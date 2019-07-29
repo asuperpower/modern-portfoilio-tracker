@@ -35,7 +35,8 @@ HEADERS += \
         asset_p.h \
         filedefs.h \
         mainwindow.h \
-        portfolio.h
+        portfolio.h \
+        portfolio_p.h
 
 FORMS += \
         mainwindow.ui

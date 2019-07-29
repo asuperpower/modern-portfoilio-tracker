@@ -5,13 +5,14 @@
 
 #include "asset.h"
 
+class PortfolioPrivate;//PIMPL
+
 class portfolio : public QObject
 {
     Q_OBJECT
 public:
-    portfolio();
     portfolio(const QString &path);
-    explicit portfolio(QObject *parent = nullptr);
+    // explicit portfolio(QObject *parent = nullptr);
     bool isValid();
     void addAsset(Asset &newAsset);
 
@@ -20,7 +21,7 @@ signals:
 public slots:
 
 private:
-    //asset class
+    Q_DECLARE_PRIVATE(Portfolio)
 };
 
 #endif // PORTFOLIO_H

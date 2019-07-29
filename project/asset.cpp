@@ -1,10 +1,10 @@
 #include "asset.h"
 #include "asset_p.h"//binary compatibility
 
-Asset::Asset(QObject *parent) : QObject(parent)
-{
+// Asset::Asset(QObject *parent) : QObject(parent)
+// {
 
-}
+// }
 
 Asset::Asset(type assetType, QString name, double allocation)
 {
@@ -19,9 +19,12 @@ Asset::Asset(type assetType, QString name, double allocation)
 QJsonDocument Asset::toJson()
 {
     Q_D(Asset);
-    QJsonObject assetJson;
+    QJsonObject assetObject;
 
-    assetJson[ASSET_TYPE] = d->assetType;
-    assetJson[ASSET_NAME] = d->name;
-    assetJson[ASSET_ALLOCATION] = d->allocation;
+    assetObject[ASSET_TYPE] = d->assetType;
+    assetObject[ASSET_NAME] = d->name;
+    assetObject[ASSET_ALLOCATION] = d->allocation;
+
+    QJsonDocument assetDocument(assetObject);
+    return assetDocument;
 }

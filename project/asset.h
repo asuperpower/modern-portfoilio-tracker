@@ -19,7 +19,7 @@ class Asset : public QObject
     Q_OBJECT
 public:
     //asset();
-    // explicit Asset(QObject *parent = nullptr);
+    explicit Asset(QObject *parent = nullptr);
     Asset(type assetType, QString name, double allocation);
     QJsonDocument toJson();
 signals:

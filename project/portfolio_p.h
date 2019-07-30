@@ -1,7 +1,7 @@
 #ifndef PORTFOLIO_P_H
 #define PORTFOLIO_P_H
 
-#include <QLinkedList>
+#include <QList>
 #include "portfolio.h"
 
 class PortfolioPrivate
@@ -9,7 +9,7 @@ class PortfolioPrivate
 public:
     Q_DISABLE_COPY(PortfolioPrivate)
 
-    QLinkedList<Asset> assetList;//list of assets imported from portfolio file
+    QList<Asset*> assetList;//list of assets imported from portfolio file
 };
 
 

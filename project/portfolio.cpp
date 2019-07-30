@@ -31,7 +31,10 @@ portfolio::portfolio(const QString &path)
 
 void portfolio::addAsset(Asset &newAsset)
 {
-    //create list, add to json doc
+    Q_D(Portfolio);
+
+    //Add to vector, (maybe don't update file until/unless it's saved)
+    d->assetList.append(&newAsset);
 }
 
 //todo: user open file

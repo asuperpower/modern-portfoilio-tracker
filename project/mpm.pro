@@ -30,8 +30,7 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
         portfolio.cpp \
-        portfolioview.cpp \
-        switcher.cpp
+        portfolioview.cpp
 
 HEADERS += \
         asset.h \
@@ -40,10 +39,10 @@ HEADERS += \
         filedefs.h \
         greeter.h \
         mainwindow.h \
+        mainwindow_p.h \
         portfolio.h \
         portfolio_p.h \
-        portfolioview.h \
-        switcher.h
+        portfolioview.h
 
 FORMS += \
         mainwindow.ui

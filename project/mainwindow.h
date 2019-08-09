@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QStackedLayout>
+
+#include "greeter.h"
+#include "portfolioview.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +21,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Greeter *greeterWidget;
+    PortfolioView *portfolioViewWidget;
 };
 
 #endif // MAINWINDOW_H

@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QStackedLayout>
 
-#include "greeter.h"
+//#include "greeter.h"
 #include "portfolioview.h"
 
 namespace Ui {
@@ -21,7 +21,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    Greeter *greeterWidget;
+    //Greeter *greeterWidget;
     PortfolioView *portfolioViewWidget;
 };
 

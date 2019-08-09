@@ -26,7 +26,6 @@ CONFIG += c++17
 
 SOURCES += \
         asset.cpp \
-        greeter.cpp \
         main.cpp \
         mainwindow.cpp \
         portfolio.cpp \
@@ -37,7 +36,6 @@ HEADERS += \
         asset_p.h \
         assettypes.h \
         filedefs.h \
-        greeter.h \
         mainwindow.h \
         mainwindow_p.h \
         portfolio.h \

@@ -7,11 +7,11 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     QStackedWidget *stackedWidget = ui->stackedWidget;
-    greeterWidget = new Greeter;
+    //greeterWidget = new Greeter;
     portfolioViewWidget = new PortfolioView;
 
     //Add widgets to stacked view
-    stackedWidget->addWidget(greeterWidget);
+    //stackedWidget->addWidget(greeterWidget);
     stackedWidget->addWidget(portfolioViewWidget);
 }
 

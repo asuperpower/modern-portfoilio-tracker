@@ -21,7 +21,7 @@ Asset::Asset(QJsonValue assetTypeJson, QJsonValue name, QJsonValue allocation)
 
     //Convert json to enum value {cash, stocks, bonds etc.}
     QString assetTypeString = assetTypeJson.toString();
-    assert(!assetTypeString.isEmpty());
+    assert(!assetTypeString.isEmpty());//do properly later
     auto &&metaEnum = QMetaEnum::fromType<Asset::AssetType>();
     d->assetType = static_cast<AssetType>(metaEnum.keyToValue(assetTypeString.toUtf8().constData())  );
 

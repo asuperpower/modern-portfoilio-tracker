@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
 
     QString configPath = getConfigLocation();
     QSettings settings(configPath, QSettings::IniFormat);
+
+    
     
     return a.exec();
 }
@@ -48,10 +50,10 @@ QString getConfigLocation() //Get location of config and parse it
     return configLocation;
 }
 
-QString getPortfolioPath() //Get location of portfolio and parse it >> TODO: Seperate into class that gets populated on opening file
-{
-    //Check QSettings for anything
-        //No config file found or doesn't specify location, use default directory
-        QString portfolioPath = QStandardPaths::locate(QStandardPaths::DocumentsLocation, FOLDER_NAME, QStandardPaths::LocateDirectory);
-    return QString("");//todo
-}
+// QString getPortfolioPath() //Get location of portfolio and parse it >> TODO: Seperate into class that gets populated on opening file
+// {
+//     //Check QSettings for anything
+//         //No config file found or doesn't specify location, use default directory
+//         QString portfolioPath = QStandardPaths::locate(QStandardPaths::DocumentsLocation, FOLDER_NAME, QStandardPaths::LocateDirectory);
+//     return QString("");//todo
+// }

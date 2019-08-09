@@ -15,6 +15,7 @@ public:
     // explicit portfolio(QObject *parent = nullptr);
     bool isValid();
     void addAsset(Asset &newAsset);
+    bool createList(QJsonDocument &jsonDoc);
 
 protected:
 signals:

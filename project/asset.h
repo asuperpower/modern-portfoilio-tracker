@@ -4,13 +4,12 @@
 #include <QObject>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QMetaEnum>
 
 //For json array
 #define ASSET_TYPE          "type"
 #define ASSET_NAME          "name"
 #define ASSET_ALLOCATION    "allocation"
-
-enum type{cash, stocks, bonds};//TODO: Should find somewhere else for this as it would break the whole PIMPL methodology if something else needs to be added
 
 class AssetPrivate;//PIMPL
 
@@ -18,9 +17,18 @@ class Asset : public QObject
 {
     Q_OBJECT
 public:
+    enum AssetType{
+        cash,
+        stocks,
+        bonds
+    };
+    Q_ENUM(AssetType)
+    
     //asset();
     explicit Asset(QObject *parent = nullptr);
-    Asset(type assetType, QString name, double allocation);
+    Asset(AssetType assetType, QString name, double allocation);
+    Asset(QJsonValue assetType, QJsonValue name, QJsonValue allocation);
+
     QJsonDocument toJson();
 signals:
 

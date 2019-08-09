@@ -33,6 +33,7 @@ SOURCES += \
 HEADERS += \
         asset.h \
         asset_p.h \
+        assettypes.h \
         filedefs.h \
         mainwindow.h \
         portfolio.h \

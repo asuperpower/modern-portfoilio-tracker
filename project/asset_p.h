@@ -9,7 +9,7 @@ class AssetPrivate
 public:
     Q_DISABLE_COPY(AssetPrivate)
 
-    type assetType;
+    Asset::AssetType assetType;
     QString name;
     double allocation;//percentage
 };
